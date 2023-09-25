@@ -25,7 +25,7 @@ public class LambdaTestAutomationAssessment extends CapabilitiesConfig {
 		try {
 			RemoteWebDriver driver = desiredCapabilitiesConfig();
 			driver.get(websiteURL);
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("__next")));
 			WebElement seeAllIntegrationLinkText = driver.findElement(By.cssSelector("div.clearfix div.text-center a"));
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
